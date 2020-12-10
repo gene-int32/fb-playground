@@ -1,4 +1,4 @@
-name: CI
+name: PDOR:DEPLOY_HOSTING
 
 on:
   push:
