@@ -44,6 +44,6 @@ jobs:
         path: dist
 
     - name: Deploy to Firebase
-      run: firebase deploy --project=dev --token $FIREBASE_TOKEN --only hosting --non-interactive
+      run: npx firebase deploy --project=dev --token $FIREBASE_TOKEN --only hosting --non-interactive
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
