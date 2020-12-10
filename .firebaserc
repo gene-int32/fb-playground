@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "fbplayground-dev",
+    "prod": "fbplayground-prod"
+  }
+}
