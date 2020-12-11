@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="col">
+        <h3>Sign In</h3>
+        <!-- <ul class="user-list" *ngIf="users$ | async as users">
+            <li *ngFor="let user of users">
+                <a>{{ user.firstName }} {{ user.lastName }}</a>
+            </li>
+        </ul> -->
+    </div>
+    <div class="col">
+        <div class="d-flex" style="justify-content: space-between">
+            <h3>Welcome, Gene</h3>
+            <a>Sign Out</a>
+        </div>
+        <!-- <ul class="user-profile">
+            <li>Name: Eugene Kravchuk</li>
+            <li>Status: Active</li>
+            <li>Role: Admin</li>
+        </ul> -->
+    </div>
+    <div class="col">
+        <h3>Projects</h3>
+        <form [formGroup]="createProjectForm" (ngSubmit)="onCreateProject()">
+            <table>
+                <thead>
+                    <th width="150">Name</th>
+                    <th width="150">Assigned</th>
+                    <th width="150">Status</th>
+                    <th width="150" colspan="2">Created</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let project of projects$ | async">
+                        <td>{{ project.name }}</td>
+                        <td>{{ project.assigned }}</td>
+                        <td>{{ project.status }}</td>
+                        <td colspan="2">{{ project.created }}</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" formControlName="name" /></td>
+                        <td><input type="text" formControlName="assigned" /></td>
+                        <td><input type="text" formControlName="status" /></td>
+                        <td><input type="text" formControlName="created" /></td>
+                        <td><button type="submit">Create</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>

@@ -6,6 +6,7 @@ export const environment: Evironment = {
   firebaseConfig: {
     apiKey: 'AIzaSyAOOAFqjzuTPeS6uLkn8ZNSBa5Cz55xIjw',
     authDomain: 'fbplayground-dev.firebaseapp.com',
+    databaseURL: 'https://fbplayground-dev-default-rtdb.firebaseio.com',
     projectId: 'fbplayground-dev',
     storageBucket: 'fbplayground-dev.appspot.com',
     messagingSenderId: '678138314037',

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import fb from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
 import { environment } from '../environments/environment';
 
@@ -8,6 +10,6 @@ import { environment } from '../environments/environment';
 })
 export class FirebaseModule {
   constructor() {
-    fb.initializeApp(environment.firebaseConfig);
+    const app = fb.initializeApp(environment.firebaseConfig);
   }
 }
