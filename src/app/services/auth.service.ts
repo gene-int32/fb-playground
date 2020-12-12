@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase/app';
-import { BehaviorSubject, fromEventPattern } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 import { User } from '../types';
 
