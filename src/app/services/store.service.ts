@@ -3,14 +3,12 @@ import { from, Observable } from 'rxjs';
 import { map, observeOn, tap } from 'rxjs/operators';
 import firebase from 'firebase/app';
 
-import { IStore } from '../types';
-
 const STORE_EVENTS = {
   VALUE: 'value'
 };
 
 @Injectable({ providedIn: 'root' })
-export class StoreService implements IStore {
+export class StoreService {
   private db = firebase.database();
 
   constructor() {}

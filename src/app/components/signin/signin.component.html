@@ -1,0 +1,16 @@
+<ng-container *ngIf="user$ | async as user; else noAuthorized"></ng-container>
+
+<ng-template #noAuthorized>
+    <form (submit)="onSignInWithEmail(email.value, secret.value)">
+        <input id="userEmail" type="text" placeholder="Email" #email />
+        <input type="password" id="userSecret" placeholder="Password" #secret />
+        <button type="submit">Sign In</button>
+        <button (click)="onGoogleSignIn()">G</button>
+    </form>
+</ng-template>
+<style>
+    form input,
+    form button {
+        margin-right: 16px;
+    }
+</style>

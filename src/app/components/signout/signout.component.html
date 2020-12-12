@@ -1,0 +1,9 @@
+<ng-container *ngIf="user$ | async as user; else noAuthorized">
+    <div class="">
+        <h3>Welcome, {{ user.displayName }}</h3>
+        <a (click)="onSignOut()">Sign Out</a>
+    </div>
+</ng-container>
+<ng-template #noAuthorized>
+    <h3>Welcome</h3>
+</ng-template>

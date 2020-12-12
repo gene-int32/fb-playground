@@ -6,9 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FirebaseModule } from './firebase.module';
 
 import { AppComponent } from './app.component';
+import { SignInComponent, SignOutComponent } from './components';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SignInComponent, SignOutComponent],
   imports: [BrowserModule, CommonModule, FormsModule, ReactiveFormsModule, FirebaseModule],
   providers: [],
   bootstrap: [AppComponent]
